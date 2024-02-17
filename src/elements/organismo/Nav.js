@@ -1,3 +1,5 @@
+import Link from '../components/Link'
+
 function Nav({direction = 'column'}) {
 
   const menuLink = [
@@ -32,7 +34,7 @@ function Nav({direction = 'column'}) {
       <ul className={`listMenu direction-${direction}`}>
         {menuLink.map(itemList => (
           <li key={itemList.label} className="itemListMenu">
-            <a  className='link' href={itemList.url}>{itemList.label}</a>
+            <Link variant={'link'} href={itemList.url}>{itemList.label}</Link>
           </li>
         ))}
       </ul>

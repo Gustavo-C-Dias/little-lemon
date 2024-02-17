@@ -1,4 +1,4 @@
-import Nav from './Nav'
+import Nav from '../organismo/Nav'
 
 function Footer() {
     return (
@@ -17,6 +17,6 @@ function Footer() {
             </div>
         </footer>
     );
-  }
+}
 
 export default Footer;
