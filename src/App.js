@@ -1,19 +1,15 @@
-import './App.css';
+import { Routes, Route } from 'react-router-dom';
+import HomePage from './elements/pages/HomePage';
+import BookingPage from './elements/pages/BookingPage';
 
-import Header from './components/Header';
-import Nav from './components/Nav';
-import Main from './components/Main';
-import Footer from './components/Footer';
+import './App.css';
 
 function App() {
   return (
-    <>
-      <Header urlImage='./assets/logo.svg'>
-        <Nav/>
-      </Header>
-      <Main />
-      <Footer/>
-    </>
+    <Routes>
+      <Route path="/" element={<HomePage />} />
+      <Route path="/booking" element={<BookingPage />} />
+    </Routes>
   );
 }
 
