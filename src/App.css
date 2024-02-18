@@ -102,6 +102,46 @@ footer {
   border-radius: 16px;
 }
 
+.customerSay {
+  padding: 80px 64px;
+}
+
+.cardCustomer {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  margin: 0;
+  padding: 0;
+  margin-top: 24px;
+}
+
+.cardCustomer > li {
+  background-color: #fff;
+  padding: 24px;
+  border-radius: 24px;
+}
+
+.headerCard {
+  display: flex;
+  justify-content: space-between;
+}
+
+.headerCard > div {
+  display: flex;
+  flex-direction: column;
+}
+
+.imageStars {
+  width: 16px;
+  height: 16px;
+}
+
+.userPhotoCard {
+  width: 60px;
+  height: 60px;
+  border-radius: 8px;
+}
+
 .link {
   color: black;
   font-size: 16px;
@@ -121,7 +161,7 @@ footer {
 }
 
 .menuSpecials {
-  margin: 180px 64px;
+  margin: 200px 64px 80px 64px;
 }
 
 .titleMemu {
@@ -155,6 +195,36 @@ footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+.chicago {
+  padding: 80px 64px;
+  display: grid;
+  grid-template-columns: 400px 1fr;
+  height: 400px;
+  align-items: center;
+  gap: 40px
+}
+
+.chicagoImagens{
+  display: flex;
+  justify-content: flex-end;
+}
+
+.chicagoPhoto{
+  width: 300px;
+  border-radius: 24px;
+}
+
+.chicagoRestaurant {
+  position: absolute;
+  margin-top: -250px;
+}
+
+.chicagoSalad {
+  position: absolute;
+  margin-right: 100px;
+
 }
 
 footer > div {
