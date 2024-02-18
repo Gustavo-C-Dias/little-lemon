@@ -4,6 +4,8 @@ import Gallery from '../organismo/Gallery';
 import Header from '../global/Header';
 import Nav from '../organismo/Nav';
 import Footer from '../global/Footer';
+import Customer from '../organismo/Customer';
+import Chicago from '../organismo/Chicago';
 
 function HomePage() {
 
@@ -49,25 +51,25 @@ function HomePage() {
     {
       name: "John Doe",
       description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.",
-      photoUser: './lemon_dessert.jpg',
+      photoUser: './assets/lemon_dessert.jpg',
       stars: 4
     },
     {
       name: "Pietra",
       description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.",
-      photoUser: './lemon_dessert.jpg',
+      photoUser: './assets/lemon_dessert.jpg',
       stars: 5
     },
     {
       name: "Camilo Silva",
       description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.",
-      photoUser: './lemon_dessert.jpg',
+      photoUser: './assets/lemon_dessert.jpg',
       stars: 4
     },
     {
       name: "Gustavo",
       description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.",
-      photoUser: './lemon_dessert.jpg',
+      photoUser: './assets/lemon_dessert.jpg',
       stars: 5
     },
   ]
@@ -91,8 +93,19 @@ function HomePage() {
         />
       </section>
 
-      <section className='customerSay'>
+      <section className='customerSay green-bg'>
+        <Customer
+          title='Customer say'
+          cards={customerSay}
+        />
+      </section>
 
+      <section className="chicago">
+        <Chicago tema='white'/>
+        <div className='chicagoImagens'>
+          <img src='./assets/restauranfood.jpg' alt='' className='chicagoPhoto chicagoRestaurant'/>
+          <img src='./assets/lemon_dessert.jpg' alt=''  className='chicagoPhoto chicagoSalad'/>
+        </div>
       </section>
     </main>
 
