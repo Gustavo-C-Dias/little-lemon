@@ -8,8 +8,8 @@ function Customer({cards, title}){
       </div>
 
       <ul className="cardCustomer">
-        {cards && cards.map ((itemList) => (
-          <li className="itemListMenu">
+        {cards && cards.map ((itemList, index) => (
+          <li className="itemListMenu" key={index}>
             <div className="headerCard">
               <div>
                 <h3>{itemList.name}</h3>

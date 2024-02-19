@@ -6,7 +6,7 @@ function Banner() {
     <>
       <div>
         <Chicago />
-        <Link href='./reserve-table' variant={'button'}>Reserva a table</Link>
+        <Link href='./booking' variant={'button'}>Reserva a table</Link>
       </div>
       <img src="./assets/restauranfood.jpg" alt=""/>
     </>
