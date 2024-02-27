@@ -1,7 +1,7 @@
 // BookingForm.jsx
 import React, { useState } from 'react';
 
-function BookingForm({ availableTimes, dispatch }) {
+function BookingForm({ availableTimes, dispatch, onSubmitForm }) {
   const [time, setTime] = useState('');
   const [guests, setGuests] = useState(1);
   const [occasion, setOccasion] = useState('Birthday');
@@ -22,20 +22,15 @@ function BookingForm({ availableTimes, dispatch }) {
     setOccasion(e.target.value);
   };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    // Aqui você pode realizar ações, como enviar os dados para uma API
-  };
-
   return (
-    <form style={{ display: 'grid', maxWidth: '200px', gap: '20px' }} onSubmit={handleSubmit}>
+    <form style={{ display: 'grid', maxWidth: '200px', gap: '20px' }} onSubmit={onSubmitForm}>
       <label htmlFor="res-date">Choose date</label>
       <input type="date" id="res-date" onChange={handleDateChange} />
 
       <label htmlFor="res-time">Choose time</label>
       <select id="res-time" value={time} onChange={handleTimeChange}>
         {availableTimes.map((availableTime, index) => (
-          <option key={index} value={availableTime}>{availableTime}</option>
+          <option key={`${index+availableTime}`} value={availableTime}>{availableTime}</option>
         ))}
       </select>
 
@@ -48,7 +43,7 @@ function BookingForm({ availableTimes, dispatch }) {
         <option value="Anniversary">Anniversary</option>
       </select>
 
-      <input type="submit" value="Make Your reservation" />
+      <input type="submit" value="Make Your reservation"/>
     </form>
   );
 }
