@@ -1,50 +1,17 @@
+import { Routes, Route } from 'react-router-dom';
+import HomePage from './elements/pages/HomePage';
+import BookingPage from './elements/pages/BookingPage';
+import ConfirmReservation from './elements/pages/ConfirmReservation';
+
 import './App.css';
-
-import Header from './components/Header';
-import Nav from './components/Nav';
-import Main from './components/Main';
-import Footer from './components/Footer';
-
-const menuLink = [
-  {
-    url:'./',
-    label:'Home'
-  },
-  {
-    url:'./About',
-    label:'About'
-  },
-  {
-    url:'./',
-    label:'Menu'
-  },
-  {
-    url:'./',
-    label:'Reservations'
-  },
-  {
-    url:'./',
-    label:'Order Online'
-  },
-  {
-    url:'./',
-    label:'Login'
-  },
-]
 
 function App() {
   return (
-    <>
-      <Header urlImage='./assets/logo.svg'>
-        <Nav
-          list={menuLink}
-        />
-      </Header>
-      <Main>
-
-      </Main>
-      <Footer/>
-    </>
+    <Routes>
+      <Route path="/" element={<HomePage />} />
+      <Route path="/booking" element={<BookingPage />} />
+      <Route path="/booking/confirmed" element={<ConfirmReservation />} />
+    </Routes>
   );
 }
 
